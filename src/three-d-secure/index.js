@@ -147,9 +147,9 @@ function create(options) {
 
       isProduction = gwConfig.environment === 'production';
 
-      if (isProduction && !isHTTPS()) {
-        error = errors.THREEDS_HTTPS_REQUIRED;
-      }
+    //   if (isProduction && !isHTTPS()) {
+    //     error = errors.THREEDS_HTTPS_REQUIRED;
+    //   }
 
       if (framework !== 'legacy' && !(gwConfig.threeDSecure && gwConfig.threeDSecure.cardinalAuthenticationJWT)) {
         analytics.sendEvent(options.client, 'three-d-secure.initialization.failed.missing-cardinalAuthenticationJWT');
